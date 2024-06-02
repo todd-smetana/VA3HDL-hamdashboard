@@ -63,6 +63,42 @@ const aURL = [
     "1",
     "R",
   ],
+  [
+    "2196F3",
+    "DXSUMMIT",
+    "http://dxsummit.fi/#/",
+    "1",
+    "R",
+  ],
+  [
+    "2196F3",
+    "SOTA",
+    "https://sotawatch.sota.org.uk/en/",
+    "1",
+    "R",
+  ],
+  [
+    "2196F3",
+    "POTA",
+    "https://pota.app",
+    "1",
+    "R",
+  ],
+  [
+    "2196F3",
+    "RADIO REF",
+    "https://www.radioreference.com/db/browse/",
+    "1",
+    "R",
+  ],
+
+
+  
+
+
+
+  
+ 
 
 
   
