@@ -49,6 +49,26 @@ const aURL = [
     "1",
     "R",
   ],
+  [
+    "2196F3",
+    "APRS",
+    "https://aprs.to/",
+    "1",
+    "R",
+  ],
+  [
+    "2196F3",
+    "PSK RPTR",
+    "https://pskreporter.info/pskmap?preset&callsign=KF0AIT&txrx=tx&timerange=1800&hideunrec=1&blankifnone=1",
+    "1",
+    "R",
+  ],
+
+
+  
+
+
+ 
 ];
 
 // Dashboard items
