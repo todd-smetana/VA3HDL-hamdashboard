@@ -1,0 +1,58 @@
+<HTML>
+
+    <script src="https://ui.powerreviews.com/stable/4.1/ui.js" async></script>
+    <script>
+      // 
+      window.theme = window.theme || {};
+      window.theme.powerReviews = {
+        selectors: {
+          baseSnippet: "power-reviews__snippet-",
+        },
+        // Helper method which can be called client-side to render any number of product IDs
+        // Currently only renders snippets, not the full widget
+        renderSnippets: function(productIds) {
+          window.pwr = window.pwr || function () {
+            (pwr.q = pwr.q || []).push(arguments);
+          };
+
+          if (Array.isArray(productIds) && productIds.length) {
+            pwr('render', productIds.map(function(id) {
+              return {
+                ENABLE_CLIENT_SIDE_STRUCTURED_DATA: false,
+                
+  api_key: "adea19b5-b8b5-4faf-b3c7-6282f0d0c87d",
+  locale: "en_US",
+  merchant_id: "412359",
+  merchant_group_id: "77856"
+,
+                page_id: ""+id,
+                components: {
+                  CategorySnippet: "power-reviews__snippet-"+id
+                },
+              }
+            }))
+          }
+        }
+      }
+
+
+    </script>
+	
+	
+
+	
+
+			  
+			  
+			  
+			  <iframe width="100%" height="100%" src="https://poweroutage.us/API/widget_1_5/us?key=FPEg239!f3h7ng!87&amp;ColorBackground=000000&amp;ColorText=015AB2&amp;
+MapColorTier1=015AB2&amp;MapColorTier2=A29F00&amp;MapColorTier3=B55700&amp;MapColorTier4=A21300&amp;M
+apColorTier5=20a860&amp;AreasClickable=true&amp;OpenExternal=false&amp;ToolTip=True&amp;CurrentTable=true&amp;His
+togram=true&amp;TopAreaCount=8&amp;pagelayout=left&amp;autorefresh=true" 
+                          id="PowerOutageMap"
+                          frameBorder=0
+                          data-iframe></iframe>
+	
+</HTML>
+
+

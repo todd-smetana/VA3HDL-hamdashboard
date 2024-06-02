@@ -42,6 +42,13 @@ const aURL = [
     "1",
     "R",
   ],
+  [
+    "2196F3",
+    "POWER",
+    "poweroutage.html",
+    "1",
+    "R",
+  ],
 ];
 
 // Dashboard items
