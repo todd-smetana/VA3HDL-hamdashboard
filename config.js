@@ -1,4 +1,4 @@
-const topBarCenterText = `KF0AIT - EN140h`;
+const topBarCenterText = `KF0AIT - EN14oh`;
 // Menu items
 // Structure is as follows HTML Color code, Option, target URL, scaling 1=Original Size, side (optional, nothing is Left, "R" is Right)
 // The values are [color code, menu text, target link, scale factor, side],
@@ -8,51 +8,60 @@ const aURL = [
   ["add10d", "BACK", "#", "1", "R"],
   ["ff9100", "Refresh", "#", "1"],
   ["0dd1a7", "Help", "#", "1"],
-  ["2196F3", "SD511", "https://www.sd511.org/#&zoom=6.643670548755828&lon=-99.55851272999115&lat=44.234424028697276&threat-forecast&cams&rwis&radar", "1"],
-  ["2196F3", "MESONET", "https://climate.sdstate.edu/", "1.0"],
-  ["2196F3", "SF CAMS", "https://www.arcgis.com/apps/dashboards/fbaac9e7423f41c7a5ebcdbace527e8c", "1.0"],
-  [
-    "2196F3",
-    "CONTEST",
-    "https://www.contestcalendar.com/fivewkcal.html",
-    "1",
-  ],
-  ["2196F3", "DX CLUSTER", "https://dxcluster.ha8tks.hu/map/", "1"],
-  [
-    "2196F3",
-    "LIGHTNING",
-    "https://map.blitzortung.org/#3.87/36.5/-89.41",
-    "1",
-    "R",
-  ],
-
+  
   [
     "2196F3",
     "RADAR",
     "https://embed.windy.com/embed.html?type=map&location=coordinates&metricRain=default&metricTemp=default&metricWind=default&zoom=4&overlay=radar&product=radar&level=surface&lat=38.845&lon=-95.508",
     "1",
-    "R"
+    "L"
   ],
-  ["2196F3", "TIME.IS", "https://time.is/", "1", "R"],
+  [
+    "2196F3",
+    "LIGHTNING",
+    "https://map.blitzortung.org/#3.87/36.5/-89.41",
+    "1",
+    "L",
+  ],
+
+
+  
+  
+  
+  ["2196F3", "SD511", "https://www.sd511.org/#&zoom=6.643670548755828&lon=-99.55851272999115&lat=44.234424028697276&threat-forecast&cams&rwis&radar", "1"],
+  ["2196F3", "MESONET", "https://climate.sdstate.edu/", "1.0"],
+  ["2196F3", "SF CAMS", "https://www.arcgis.com/apps/dashboards/fbaac9e7423f41c7a5ebcdbace527e8c", "1.0"],
+  [
+    "2196F3",
+    "POWER",
+    "poweroutage.html",
+    "1",
+    "L",
+  ],
 
   [
     "2196F3",
     "WINDS",
     "https://earth.nullschool.net/#current/wind/surface/level/orthographic=-100.53,38.01,1478",
     "1",
-    "R",
+    "L",
   ],
+
+
+
+
+
   [
     "2196F3",
-    "POWER",
-    "poweroutage.html",
+    "APRS",
+    "https://aprs.to/",
     "1",
     "R",
   ],
   [
     "2196F3",
-    "APRS",
-    "https://aprs.to/",
+    "ADSB",
+    "https://globe.adsb.fi/",
     "1",
     "R",
   ],
@@ -63,6 +72,15 @@ const aURL = [
     "1",
     "R",
   ],
+
+  [
+    "2196F3",
+    "CONTEST",
+    "https://www.contestcalendar.com/fivewkcal.html",
+    "1",
+    "R"
+  ],
+  ["2196F3", "DX CLUSTER", "https://dxcluster.ha8tks.hu/map/", "1","R"],
   [
     "2196F3",
     "DXSUMMIT",
@@ -106,20 +124,14 @@ const aURL = [
   
   [
     "2196F3",
-    "HAMSHACK HOTLINE",
+    "HH",
     "https://apps.hamshackhotline.com/services.php",
     "1",
     "R",
   ],
-  [
-    "2196F3",
-    "ADSB",
-    "https://globe.adsb.fi/",
-    "1",
-    "R",
-  ],
 
 
+  ["2196F3", "TIME.IS", "https://time.is/", "1", "R"],
   
 
   
