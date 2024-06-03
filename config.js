@@ -91,6 +91,38 @@ const aURL = [
     "1",
     "R",
   ],
+  [
+    "2196F3",
+    "BROADCSTFY",
+    "https://www.broadcastify.com/listen/",
+    "1",
+    "R",
+  ],
+
+  
+
+
+
+  
+  [
+    "2196F3",
+    "HAMSHACK HOTLINE",
+    "https://apps.hamshackhotline.com/services.php",
+    "1",
+    "R",
+  ],
+  [
+    "2196F3",
+    "ADSB",
+    "https://globe.adsb.fi/",
+    "1",
+    "R",
+  ],
+
+
+  
+
+  
 
 
   
