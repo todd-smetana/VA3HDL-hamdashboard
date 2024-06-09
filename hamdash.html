@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-  
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -16,10 +15,10 @@
       rel="stylesheet"
     />
     <title>VA3HDL Ham Radio Dashboard</title>
-    
-<!--
+    <!--
 	Hamdash
 	License: MIT
+  Copyright (c) 2024 Pablo Sabbag, VA3HDL
 	https://www.va3hdl.com/projects/hamdash
 
   Credits:
@@ -147,9 +146,8 @@ db   8D    88       88    88booo. 88.     db   8D
 
       /* Style for the image */
       .image-container img {
-        width: 100%;
         height: 100%;
-        object-fit: cover;
+        width: 100%;
       }
 
       /* Style for the image titles */
@@ -182,6 +180,16 @@ db   8D    88       88    88booo. 88.     db   8D
         height: 100%;
       }
 
+      .media {
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+      }
+
+      .hidden {
+        display: none;
+      }
+
       /* Style for the left menu options */
       .menu {
         display: grid;
@@ -189,10 +197,9 @@ db   8D    88       88    88booo. 88.     db   8D
         position: absolute;
         width: auto;
         height: auto;
-        margin-top: 70px;
-        left: -100px;
+        margin-top: 10vh;
+        left: calc(-5.2vw - 0px);
         z-index: 2;
-        overflow: hidden;
         transition: 0.3s;
       }
 
@@ -203,32 +210,32 @@ db   8D    88       88    88booo. 88.     db   8D
         position: absolute;
         width: 30px;
         height: auto;
-        margin-top: 70px;
-        right: 0px;
+        margin-top: 10vh;
+        right: -5px;
         z-index: 2;
         transition: 0.3s;
       }
 
       #myMenu:hover {
-        width: 140px;
+        width: 7vw;
         left: 0px;
       }
 
       #myMenuR:hover {
-        width: 140px;
+        width: 7vw;
         right: 0px;
       }
 
       #mySidenav a {
         position: relative;
         float: inline-start;
-        left: -20px;
+        left: calc(-0.2vw - 10px);
         transition: 0.3s;
         padding-left: 15px;
         padding-right: 15px;
         padding-top: 12px;
         padding-bottom: 8px;
-        width: 100px;
+        width: 5vw;
         text-decoration: none;
         font-family: "Bebas Neue", sans-serif;
         font-size: 1.2vw;
@@ -248,13 +255,13 @@ db   8D    88       88    88booo. 88.     db   8D
       #mySidenavR a {
         position: relative;
         float: inline-start;
-        right: -20px;
+        right: calc(-0.2vw - 10px);
         transition: 0.3s;
         padding-left: 15px;
         padding-right: 15px;
         padding-top: 12px;
         padding-bottom: 8px;
-        width: 100px;
+        width: 7vw;
         text-decoration: none;
         font-family: "Bebas Neue", sans-serif;
         font-size: 1.2vw;
@@ -269,7 +276,7 @@ db   8D    88       88    88booo. 88.     db   8D
 
       #mySidenavR a:hover {
         right: 0;
-        width: 130px;
+        width: 7vw;
       }
     </style>
   </head>
@@ -288,6 +295,24 @@ db   8D Y8b  d8 88 `88.   .88.   88         88    db   8D
   <script>
     var largeShow = 0;
     var aIdx = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1];
+    var help = "Double click on an image to expand to full screen.\n";
+    help += "Double click again to close full screen view.\n";
+    help += "Right click on an image to display the next one.\n";
+    help += "The content refreshes automatically every 5 minutes.\n";
+    help += "Images rotates every 30 seconds.\n";
+
+    const videoExtensions = [".mp4", ".webm", ".ogg", ".ogv"];
+
+    function isVideo(src) {
+      return videoExtensions.some((ext) => src.includes(ext));
+    }
+
+    function getVideoType(src) {
+      if (src.includes(".mp4")) return "video/mp4";
+      if (src.includes(".webm")) return "video/webm";
+      if (src.includes(".ogg") || src.includes(".ogv")) return "video/ogg";
+      return "";
+    }
 
     // This function shows the embedded websites
     function MenuOpt(num) {
@@ -313,11 +338,7 @@ db   8D Y8b  d8 88 `88.   .88.   88         88    db   8D
         getSlideId = setInterval(() => slide(), 5000);
         //
       } else if (aURL[num][1].toLowerCase() == "help") {
-        alert(`Double click on an image to expand to full screen.
-Double click again to close full screen view.
-Right click on an image to display the next one.
-The content refreshes automatically every 5 minutes.
-`);
+        alert(help);
       }
     }
 
@@ -347,6 +368,14 @@ The content refreshes automatically every 5 minutes.
       }
     }
 
+    // Check if the image URL already include parameters, then avoid the random timestamp
+    function imgURL(url) {
+      if (url.includes("?")) {
+        return url;
+      }
+      return url + "?_=" + Date.now();
+    }
+
     // Manually rotate images
     function rotate(event) {
       event.preventDefault();
@@ -357,10 +386,17 @@ The content refreshes automatically every 5 minutes.
         if (aIdx[i] > aIMG[i].length - 1) {
           aIdx[i] = 1;
         }
-        document.getElementById(targetElement.id).src = aIMG[i][aIdx[i]];
+        if (isVideo(aIMG[i][aIdx[i]])) {
+          // Is video, event is not attached to videos for now, do nothing
+        } else {
+          // Is image
+          document.getElementById(targetElement.id).src = imgURL(
+            aIMG[i][aIdx[i]]
+          );
+        }
       }
     }
-    
+
     // Automatically rotate images
     function slide() {
       // get the locations with multiple images
@@ -371,23 +407,25 @@ The content refreshes automatically every 5 minutes.
             aIdx[i] = 1;
           }
           // console.log("Image" + i, " ", aIMG[i][aIdx[i]]);
-          img = document.getElementById("Image" + i);
-          img.src = aIMG[i][aIdx[i]];
-          // img.style.opacity = 0;
-          // img.style.transform = "translateX(-100%)";
+          if (isVideo(aIMG[i][aIdx[i]])) {
+            // Is video
+            vid = document.getElementById("Video" + i);
+            vid.src = imgURL(aIMG[i][aIdx[i]]);
+            vid.classList.remove("hidden");
+            // Hide image
+            img = document.getElementById("Image" + i);
+            img.classList.add("hidden");
+          } else {
+            // Is image
+            img = document.getElementById("Image" + i);
+            img.src = imgURL(aIMG[i][aIdx[i]]);
+            img.classList.remove("hidden");
+            // Hide video
+            vid = document.getElementById("Video" + i);
+            vid.classList.add("hidden");
+          }
         }
       });
-      // setTimeout(() => {
-      //   aIMG.forEach(function (innerArray, i) {
-      //     if (aIMG[i].length > 2) {
-      //       console.log("Image" + i);
-      //       img = document.getElementById("Image" + i);
-      //       // img.style.opacity = 1;
-      //       // img.style.transform = "translateX(0)";
-      //       img.src = aIMG[i][aIdx[i]];
-      //     }
-      //   });
-      // }, 1000);
     }
 
     function start() {
@@ -405,10 +443,10 @@ The content refreshes automatically every 5 minutes.
           newDiv.className = "sidenavR";
           parentDivR.appendChild(newDiv);
         } else {
-        // Set some properties for the new div
-        newDiv.id = "mySidenav";
-        newDiv.className = "sidenav";
-        parentDiv.appendChild(newDiv);
+          // Set some properties for the new div
+          newDiv.id = "mySidenav";
+          newDiv.className = "sidenav";
+          parentDiv.appendChild(newDiv);
         }
       });
 
@@ -418,16 +456,58 @@ The content refreshes automatically every 5 minutes.
       aIMG.forEach(function (innerArray, index) {
         // Create a new div element
         var newDiv = document.createElement("div");
-        // Set some properties for the new div
         newDiv.className = "image-container";
+        newDiv.id = `box${index}`;
+
+        // Add video placeholder containers
+        const video = document.createElement("video");
+        video.id = `Video${index}`;
+        video.classList.add("media", "hidden");
+        video.controls = true;
+        video.autoplay = true;
+        video.loop = true;
+        const source = document.createElement("source");
+
         // Create a new img element
         var newImg = document.createElement("img");
         newImg.id = `Image${index}`;
-        newImg.src = innerArray[1];
-        newImg.oncontextmenu = rotate;
-        newImg.ondblclick = larger;
-        parentDiv.appendChild(newDiv);
+        newImg.classList.add("hidden");
+
+        if (isVideo(innerArray[1])) {
+          // Is a video
+          video.classList.remove("hidden");
+          source.src = innerArray[1];
+          source.type = getVideoType(innerArray[1]);
+          video.appendChild(source);
+        } else {
+          // Is an image
+          newImg.classList.remove("hidden");
+          newImg.src = imgURL(innerArray[1]);
+          newImg.oncontextmenu = rotate;
+          newImg.ondblclick = larger;
+          newImg.onerror = function () {
+            text = "Failed to load image";
+            console.log(text, this.src);
+            if (this.src.includes("?")) {
+              // Retry without passing variables first to see if fixes the error
+              console.log("Trying without caching prevention");
+              newImg.src = this.src.split("?")[0];
+            } else {
+              el = `<svg xmlns="http://www.w3.org/2000/svg" width="480" height="330">
+                  <g>
+                    <text style="font-size:34px; line-height:1.25; white-space:pre; fill:#ffaa00; fill-opacity:1; stroke:#ffaa00; stroke-opacity:1;">
+                      <tspan x="100" y="150">${text}</tspan>
+                      </text>
+                      </g>
+                      </svg>`;
+              newImg.src = "data:image/svg+xml;base64," + window.btoa(el);
+            }
+          };
+        }
+        // append newDivs boxNN
+        newDiv.appendChild(video);
         newDiv.appendChild(newImg);
+        parentDiv.appendChild(newDiv);
         // Create a new div element for img title
         var newTtl = document.createElement("div");
         newTtl.className = "image-title";
@@ -449,10 +529,11 @@ The content refreshes automatically every 5 minutes.
     // This function update the time on the top bar
     function updateTopBar() {
       const now = new Date();
-
-      const options = { weekday: "long", month: "long", day: "numeric" };
-
-      const localDate = now.toLocaleDateString("en-US", options);
+      const localDate = now.toLocaleDateString("en-US", {
+        weekday: "long",
+        month: "long",
+        day: "numeric",
+      });
       const localTime = now.toLocaleTimeString("en-US", {
         hour12: true,
         hour: "2-digit",
@@ -474,7 +555,6 @@ The content refreshes automatically every 5 minutes.
 
     // Update every second
     setInterval(updateTopBar, 1000);
-
   </script>
   <!--
 d8888b.  .d88b.  d8888b. db    db
@@ -488,12 +568,7 @@ Y8888P'  `Y88P'  Y8888D'    YP
 -->
   <body onload="start()">
     <div id="iFrameContainer" class="iframe-container">
-      <iframe
-        class="full-screen"
-        id="FullScreen"
-        src=""
-        title="Zoom"
-      ></iframe>
+      <iframe class="full-screen" id="FullScreen" src="" title="Zoom"></iframe>
     </div>
 
     <div id="imgZoom" class="img-zoom">
@@ -519,17 +594,23 @@ Y8888P'  `Y88P'  Y8888D'    YP
           id="topBarLeft"
           class="child"
           style="text-align: left; padding-left: 7px; color: blanchedalmond"
-        ></div>
+        >
+          &nbsp;
+        </div>
         <div
           id="topBarCenter"
           class="child"
           style="text-align: center; color: rgb(0, 119, 255)"
-        ></div>
+        >
+          &nbsp;
+        </div>
         <div
           id="topBarRight"
           class="child"
           style="text-align: right; padding-right: 5px; color: aquamarine"
-        ></div>
+        >
+          &nbsp;
+        </div>
       </div>
       <div id="dash" class="dashboard">
         <!-- Images container -->
