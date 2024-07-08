@@ -3,7 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="Refresh" content="300" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -326,11 +325,36 @@ db   8D Y8b  d8 88 `88.   .88.   88         88    db   8D
   <script>
     var largeShow = 0;
     var aIdx = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1];
+    var aInt = [null,null,null,null,null,null,null,null,null,null,null,null];
     var help = "Double click on an image to expand to full screen.\n";
     help += "Double click again to close full screen view.\n";
     help += "Right click on an image to display the next one.\n";
-    help += "The content refreshes automatically every 5 minutes.\n";
-    help += "Images rotates every 30 seconds automatically.\n";
+    help += "Images rotates every 30 seconds automatically by default.\n";
+
+    const currentVersion = 'v2024.07.06'; // You can also load this from a config.json file
+
+    async function getLatestVersion() {
+      try {
+        const response = await fetch('https://api.github.com/repos/VA3HDL/hamdashboard/releases/latest');
+        const data = await response.json();
+        return data.tag_name;
+      } catch (error) {
+        console.error('Error fetching the latest version:', error);
+        return currentVersion; // Fallback to the current version if there's an error
+      }
+    }
+
+    function isNewVersionAvailable(currentVersion, latestVersion) {
+      return currentVersion !== latestVersion;
+    }
+
+    async function checkForUpdates() {
+      const latestVersion = await getLatestVersion();
+      if (isNewVersionAvailable(currentVersion, latestVersion)) {
+        aURL.push(["FF0000", "Update", "#", "1", "R"]);
+        alert(`A new version (${latestVersion}) is available in Github.`);
+      }
+    }
 
     const videoExtensions = [".mp4", ".webm", ".ogg", ".ogv"];
 
@@ -355,11 +379,34 @@ db   8D Y8b  d8 88 `88.   .88.   88         88    db   8D
         ).join('<br>');
     }
 
+    function setRot(){
+      if (typeof tileDelay === 'undefined') {
+        // If no individual tile rotation is defined then default is 30s or 30000ms
+        aInt[0] = setInterval(() => slide(), 30000);
+      } else {
+        tileDelay.forEach( function(tile,i) {
+          if (tile>0) {
+            aInt[i] = setInterval(() => slide(i), tile);
+          }
+        });
+      }
+    }
+
+    function rotStop(){
+      if (typeof tileDelay === 'undefined') {
+        clearTimeout(aInt[0]);
+      } else {
+        tileDelay.forEach( function(tile,i) {
+          clearTimeout(aInt[i]);
+        });
+      }
+    }
+
     // This function shows the embedded websites
     function MenuOpt(num) {
       // Stop refreshes
       window.stop();
-      clearTimeout(getSlideId);
+      rotStop();
       //
       document.getElementById("FullScreen").style.display = "block";
       document.getElementById("iFrameContainer").style.zIndex = 1;
@@ -368,15 +415,14 @@ db   8D Y8b  d8 88 `88.   .88.   88         88    db   8D
         "scale(" + aURL[num][3] + ")";
 
       if (aURL[num][1].toLowerCase() == "back") {
-        // Start refreshes
-        window.location.reload(true);
-        getSlideId = setInterval(() => slide(), 5000);
+        // Start tile refreshes
+        setRot();
         //
         wheelzoom(document.querySelectorAll("img"));
       } else if (aURL[num][1].toLowerCase() == "refresh") {
-        // Start refreshes
-        window.location.reload(true);
-        getSlideId = setInterval(() => slide(), 5000);
+        location.reload();
+        // Start tile refreshes
+        setRot();
         //
       } else if (aURL[num][1].toLowerCase() == "help") {
         alert(help);
@@ -384,6 +430,8 @@ db   8D Y8b  d8 88 `88.   .88.   88         88    db   8D
         document.getElementById("array1").innerHTML = "<br>" + formatArray(aURL) + "<br><br>";
         document.getElementById("array2").innerHTML = "<br>" + formatArray(aIMG) + "<br>";
         document.getElementById("overlay").style.display = "block";
+      } else if (aURL[num][1].toLowerCase() == "update") {
+        window.open("https://github.com/VA3HDL/hamdashboard/releases/", "_blank").focus();
       }
     }
 
@@ -396,8 +444,7 @@ db   8D Y8b  d8 88 `88.   .88.   88         88    db   8D
       var targetElement = event.target || event.srcElement;
       if (largeShow == 1) {
         // Start refreshes
-        window.location.reload(true);
-        getSlideId = setInterval(() => slide(), 5000);
+        setRot();
         //
         largeShow = 0;
         document.getElementById("imgZoom").style.display = "none";
@@ -405,9 +452,10 @@ db   8D Y8b  d8 88 `88.   .88.   88         88    db   8D
       } else {
         // Stop refreshes
         window.stop();
-        clearTimeout(getSlideId);
+        rotStop();
         //
         largeShow = 1;
+        largeIdx = +targetElement.id.match(/\d+/)[0];
         document.getElementById("imgZoom").style.display = "block";
         document.getElementById("imgZoom").style.zIndex = 3;
         document.getElementById("ImageLarge").src =
@@ -429,7 +477,11 @@ db   8D Y8b  d8 88 `88.   .88.   88         88    db   8D
     function rotate(event) {
       event.preventDefault();
       var targetElement = event.target || event.srcElement;
-      i = +targetElement.id.match(/\d+/)[0];
+      if (largeShow == 1) {
+        i = largeIdx;
+      } else {
+        i = +targetElement.id.match(/\d+/)[0];
+      }
       if (aIMG[i].length > 2) {
         ++aIdx[i];
         if (aIdx[i] > aIMG[i].length - 1) {
@@ -446,35 +498,45 @@ db   8D Y8b  d8 88 `88.   .88.   88         88    db   8D
       }
     }
 
-    // Automatically rotate images
-    function slide() {
-      // get the locations with multiple images
-      aIMG.forEach(function (innerArray, i) {
-        if (aIMG[i].length > 2) {
-          ++aIdx[i];
-          if (aIdx[i] > aIMG[i].length - 1) {
-            aIdx[i] = 1;
-          }
-          // console.log("Image" + i, " ", aIMG[i][aIdx[i]]);
-          if (isVideo(aIMG[i][aIdx[i]])) {
-            // Is video
-            vid = document.getElementById("Video" + i);
-            vid.src = imgURL(aIMG[i][aIdx[i]]);
-            vid.classList.remove("hidden");
-            // Hide image
-            img = document.getElementById("Image" + i);
-            img.classList.add("hidden");
-          } else {
-            // Is image
-            img = document.getElementById("Image" + i);
-            img.src = imgURL(aIMG[i][aIdx[i]]);
-            img.classList.remove("hidden");
-            // Hide video
-            vid = document.getElementById("Video" + i);
-            vid.classList.add("hidden");
-          }
+    function imgRot(i){
+      if (aIMG[i].length > 2) {
+        ++aIdx[i];
+        if (aIdx[i] > aIMG[i].length - 1) {
+          aIdx[i] = 1;
         }
-      });
+      }
+      // console.log(i, aIdx[i], aIMG[i][aIdx[i]]);
+      if (isVideo(aIMG[i][aIdx[i]])) {
+        // Is video
+        vid = document.getElementById("Video" + i);
+        vid.src = imgURL(aIMG[i][aIdx[i]]);
+        vid.classList.remove("hidden");
+        // Hide image
+        img = document.getElementById("Image" + i);
+        img.classList.add("hidden");
+      } else {
+        // Is image
+        img = document.getElementById("Image" + i);
+        img.src = imgURL(aIMG[i][aIdx[i]]);
+        img.classList.remove("hidden");
+        // Hide video
+        vid = document.getElementById("Video" + i);
+        vid.classList.add("hidden");
+      }
+    }
+
+    // Automatically rotate images
+    function slide(i) {
+      // check all tiles or one tile
+      if (typeof i === 'undefined') {
+        // get the locations with multiple images
+        aIMG.forEach(function (innerArray, i) {
+          imgRot(i);
+        });
+      } else {
+        // Only one tile as per timeout call
+        imgRot(i);
+      }
     }
 
     function start() {
@@ -575,7 +637,7 @@ db   8D Y8b  d8 88 `88.   .88.   88         88    db   8D
         window.location.reload();
       });
 
-      getSlideId = setInterval(() => slide(), 30000);
+      setRot();
     }
 
     // This function update the time on the top bar
@@ -587,7 +649,7 @@ db   8D Y8b  d8 88 `88.   .88.   88         88    db   8D
         day: "numeric",
       });
       const localTime = now.toLocaleTimeString("en-US", {
-        hour12: true,
+        hour12: false,
         hour: "2-digit",
         minute: "2-digit",
         second: "2-digit",
@@ -607,6 +669,9 @@ db   8D Y8b  d8 88 `88.   .88.   88         88    db   8D
 
     // Update every second
     setInterval(updateTopBar, 1000);
+
+    // Run the check when the application starts
+    checkForUpdates();
   </script>
   <!--
 d8888b.  .d88b.  d8888b. db    db
@@ -629,6 +694,7 @@ Y8888P'  `Y88P'  Y8888D'    YP
         id="ImageLarge"
         alt="pic"
         ondblclick="larger(event);"
+        oncontextmenu="rotate(event);"
       />
     </div>
 
