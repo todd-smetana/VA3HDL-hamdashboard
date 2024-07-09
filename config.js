@@ -223,6 +223,7 @@ const aURL = [
         "SPC CONVECTIVE",
         "https://www.spc.noaa.gov/products/activity_loop.gif",
         //"http://www.spc.noaa.gov/products/outlook/day1otlk_sm.gif",
+        "https://x-hv1.pivotalweather.com/maps/warnings/nwshaz.conus.png"
       ],
       ["GREY LINE", "https://www.timeanddate.com/scripts/sunmap.php?iso=now"],
       [
