@@ -12,12 +12,16 @@ const aURL = [
 
   [
     "FF000F",
-    "Wx Alerts",
+    "LCL Alerts",
     "https://alerts.weather.gov/search?zone=SDC011", 
     "1"
 
     ],
   
+["FF000F", "NAT Alerts", "https://warn.pbs.org/", "1"],
+
+
+["FF000F", "NWS DSHBRD", "https://www.arcgis.com/apps/MapSeries/index.html?appid=ea8b0eeb2e9c45b790329c0ed2fdc225", "1"],
 
   [
     "2196F3",
@@ -107,6 +111,7 @@ const aURL = [
     "1",
     "R",
   ],
+  ["2196F3", "DX Heat", "https://dxheat.com/dxc/", "1","R"],
   [
     "2196F3",
     "SOTA",
