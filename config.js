@@ -258,6 +258,12 @@ const aURL = [
         "LIGHTNING LOCAL",
         "https://www.blitzortung.org/en/Images/image_b_mn.png",
       ],
+
+     // ["YOUTUBE EXAMPLE", "iframe|https://www.youtube.com/embed/0so_l_Vhtb4?autoplay=1&mute=1"],
+     // [
+     //   "WEBSITE EXAMPLE",
+     //   "iframe|https://globe.adsbexchange.com/?airport=BKX",
+     // ],
       
       ["SEISMIC ACTIVITY", "https://ds.iris.edu/seismon/views/eveday_big//imgs/topMap.eveday_big.gif"],
 
