@@ -253,30 +253,32 @@ const aURL = [
       [
         "LIGHTNING",
         "https://images.lightningmaps.org/blitzortung/america/index.php?animation=usa",
-      ],
-      [
-        "LIGHTNING LOCAL",
         "https://www.blitzortung.org/en/Images/image_b_mn.png",
       ],
-
-     // ["YOUTUBE EXAMPLE", "iframe|https://www.youtube.com/embed/0so_l_Vhtb4?autoplay=1&mute=1"],
+      ["SEISMIC ACTIVITY", "https://ds.iris.edu/seismon/views/eveday_big//imgs/topMap.eveday_big.gif"],
+    //  [
+    //    "LIGHTNING LOCAL",
+    //    "https://www.blitzortung.org/en/Images/image_b_mn.png",
+    //  ],
+    ["", "https://www.hamqsl.com/solar101vhf.php",
+      "https://www.hamqsl.com/solar100sc.php",
+      "https://www.hamqsl.com/solarpich.php"],
+     ["SDSM&T", "iframe|https://www.youtube.com/embed/0so_l_Vhtb4?autoplay=1&mute=1"],
      // [
      //   "WEBSITE EXAMPLE",
      //   "iframe|https://globe.adsbexchange.com/?airport=BKX",
      // ],
       
-      ["SEISMIC ACTIVITY", "https://ds.iris.edu/seismon/views/eveday_big//imgs/topMap.eveday_big.gif"],
+      
 
-      ["", "https://www.hamqsl.com/solar101vhf.php",
-  "https://www.hamqsl.com/solar100sc.php",
-  "https://www.hamqsl.com/solarpich.php"],
+      
 
       
     ];
 
 
 // Image rotation intervals in milliseconds per tile - If the line below is commented, all tiles will be rotated every 30000 milliseconds (30s)
-const tileDelay = [30000,30000,30000,5000,30000,30000,30000,5000,30000,30000,30000,30000];
+const tileDelay = [30000,30000,30000,5000,30000,30000,30000,5000,30000,30000,30000,30000000];
 
 
 
