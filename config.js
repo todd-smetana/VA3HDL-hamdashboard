@@ -263,7 +263,8 @@ const aURL = [
     ["", "https://www.hamqsl.com/solar101vhf.php",
       "https://www.hamqsl.com/solar100sc.php",
       "https://www.hamqsl.com/solarpich.php"],
-     ["SDSM&T", "iframe|https://www.youtube.com/embed/0so_l_Vhtb4?autoplay=1&mute=1"],
+    // ["SDSM&T", "iframe|https://www.youtube.com/embed/0so_l_Vhtb4?autoplay=1&mute=1"],
+     ["SDSM&T", "iframe|https://www.youtube.com/embed/0so_l_Vhtb4?autoplay=0&mute=1"],
      // [
      //   "WEBSITE EXAMPLE",
      //   "iframe|https://globe.adsbexchange.com/?airport=BKX",
