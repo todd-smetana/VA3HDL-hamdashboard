@@ -227,6 +227,7 @@ const aURL = [
       [
         "SATELLITE",
         "https://cdn.star.nesdis.noaa.gov/GOES16/GLM/CONUS/EXTENT3/GOES16-CONUS-EXTENT3-625x375.gif",
+        "https://cdn.star.nesdis.noaa.gov/GOES16/ABI/SECTOR/umv/GEOCOLOR/GOES16-UMV-GEOCOLOR-600x600.gif"
       ],
       [
         "SPC CONVECTIVE",
