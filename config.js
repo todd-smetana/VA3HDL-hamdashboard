@@ -273,7 +273,9 @@ const aURL = [
     //    "LIGHTNING LOCAL",
     //    "https://www.blitzortung.org/en/Images/image_b_mn.png",
     //  ],
-    ["", "https://www.hamqsl.com/solar101vhf.php",
+    ["", 
+      "iframe|https://api.wo-cloud.com/content/widget/?geoObjectKey=7448008&language=en&region=US&timeFormat=HH:mm&windUnit=mph&systemOfMeasurement=imperial&temperatureUnit=fahrenheit",
+      "https://www.hamqsl.com/solar101vhf.php",
       "https://www.hamqsl.com/solar100sc.php",
       "https://www.hamqsl.com/solarpich.php",
       
