@@ -7,11 +7,14 @@ var layout_rows = 3;
 // Structure is as follows HTML Color code, Option, target URL, scaling 1=Original Size, side (optional, nothing is Left, "R" is Right)
 // The values are [color code, menu text, target link, scale factor, side],
 // add new lines following the structure for extra menu options. The comma at the end is important!
+
+const disableSetup = true;
+
 const aURL = [
-  ["add10d", "BACK", "#", "1"],
-  ["add10d", "BACK", "#", "1", "R"],
-  ["ff9100", "Refresh", "#", "1"],
-  ["0dd1a7", "Help", "#", "1"],
+//  ["add10d", "BACK", "#", "1"],
+//  ["add10d", "BACK", "#", "1", "R"],
+//  ["ff9100", "Refresh", "#", "1"],
+//  ["0dd1a7", "Help", "#", "1"],
   
 
   [
@@ -299,7 +302,17 @@ const aURL = [
 // Image rotation intervals in milliseconds per tile - If the line below is commented, all tiles will be rotated every 30000 milliseconds (30s)
 const tileDelay = [30000,30000,5000,5000,30000,30000,30000000,5000,30000,30000,5000,30000000];
 
+var aRSS = [
 
+
+
+  ["http://www.spc.noaa.gov/products/spcwwrss.xml"],
+  ["https://www.keloland.com/weather/forecast/feed"],
+  ["https://moxie.foxweather.com/google-publisher/weather-news.xml"],
+  
+//  ["https://www.amsat.org/feed/"],          // Example RSS feed
+//  ["https://daily.hamweekly.com/atom.xml"], // Example Atom feed
+  ];
 
 
 
