@@ -214,6 +214,7 @@ const aURL = [
       [
         "LOCAL RADAR",
         "https://radar.weather.gov/ridge/standard/KABR_loop.gif",
+        "https://radar.weather.gov/ridge/standard/KFSD_loop.gif"
         
       ],
       [
@@ -300,7 +301,7 @@ const aURL = [
 
 
 // Image rotation intervals in milliseconds per tile - If the line below is commented, all tiles will be rotated every 30000 milliseconds (30s)
-const tileDelay = [30000,30000,5000,5000,30000,30000,30000000,5000,30000,30000,5000,30000000];
+const tileDelay = [30000,5000,5000,5000,30000,30000,30000000,5000,30000,30000,5000,30000000];
 
 var aRSS = [
 
