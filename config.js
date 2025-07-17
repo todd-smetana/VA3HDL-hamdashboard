@@ -301,7 +301,7 @@ const aURL = [
 
 
 // Image rotation intervals in milliseconds per tile - If the line below is commented, all tiles will be rotated every 30000 milliseconds (30s)
-const tileDelay = [30000,5000,5000,5000,30000,30000,30000000,5000,30000,30000,5000,30000000];
+const tileDelay = [30000,10000,10000,10000,30000,30000,30000000,10000,30000,30000,10000,30000000];
 
 var aRSS = [
 
