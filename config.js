@@ -15,7 +15,7 @@ const aURL = [
 //  ["add10d", "BACK", "#", "1", "R"],
 //  ["ff9100", "Refresh", "#", "1"],
 //  ["0dd1a7", "Help", "#", "1"],
-  
+   ["f3de21ff", "satellite.js"],
 
   [
     "FF000F",
