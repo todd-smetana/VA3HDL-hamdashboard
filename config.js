@@ -15,6 +15,9 @@ const aURL = [
 //  ["add10d", "BACK", "#", "1", "R"],
 //  ["ff9100", "Refresh", "#", "1"],
 //  ["0dd1a7", "Help", "#", "1"],
+
+
+//"2196F3", "Meshcom Map", "https://26269.de/meshcom-map/", "1"
    ["f3de21ff", "satellite.js"],
 
   [
@@ -196,6 +199,19 @@ const aURL = [
 // but you can replace the titles and the images with anything you want.
 // Dashboard items - Structure is Title, Image Source URL
     // [Title, Image Source URL]
+
+    // radio dashboard
+    /*"ISS POSITION", "https://www.heavens-above.com/orbitdisplay.aspx?icon=iss&width=600&height=300&mode=M&satid=25544"
+"", "https://www.hamqsl.com/solarpich.php"
+"Solar WX", "https://services.swpc.noaa.gov/images/animations/suvi/primary/map/latest.png"
+"IONOSPHERE", "https://www.sws.bom.gov.au/Images/HF%20Systems/Global%20HF/T%20Index%20Map/East/tindex.png"
+"NOAA D-`xRAP", "https://services.swpc.noaa.gov/images/animations/d-rap/global/d-rap/latest.png"
+"", "https://www.hamqsl.com/solar101vhf.php"
+"", "https://www.hamqsl.com/marston.php"
+"MUF", "https://prop.kc2g.com/renders/current/mufd-normal-now.svg"
+"CRITICAL FREQUENCY", "https://prop.kc2g.com/renders/current/fof2-normal-now.svg"
+"CURRENT SUN", "https://umbra.nascom.nasa.gov/images/latest_aia_304.gif", "https://umbra.nascom.nasa.gov/images/latest_aia_1700.gif" 
+*/
     const aIMG = [
 
 
@@ -219,6 +235,8 @@ const aURL = [
       ],
       [
         "",
+        "iframe|https://aprs-map.info/?center=44.2933,-96.7885&zoom=13",
+        //"iframe|https://meshmap.net/"
         "https://stats.allstarlink.org/getstatus.cgi?59505",
         "https://services.swpc.noaa.gov/images/animations/d-rap/global/d-rap/latest.png",
         "https://services.swpc.noaa.gov/images/animations/ovation/north/latest.jpg",
@@ -232,9 +250,9 @@ const aURL = [
         "CAM LOCAL",
         "https://climate.sdstate.edu/pictures/BKMS2/mostrecent1.jpg",
 		"https://climate.sdstate.edu/pictures/BKMS2/mostrecent2.jpg",
-		"https://sd.cdn.iteris-atis.com/camera_images/CSDBKX/1/latest.jpg",
-		"https://sd.cdn.iteris-atis.com/camera_images/CSDBKX/2/latest.jpg",
-		"https://campanilecam.sdstate.edu/jpg/1/image.jpg",
+		//"https://sd.cdn.iteris-atis.com/camera_images/CSDBKX/1/latest.jpg",
+		//"https://sd.cdn.iteris-atis.com/camera_images/CSDBKX/2/latest.jpg",
+		//"https://campanilecam.sdstate.edu/jpg/1/image.jpg",
       ],
       [
         "SATELLITE",
