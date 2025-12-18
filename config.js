@@ -244,8 +244,21 @@ const aURL = [
         "CAM LOCAL",
         "https://climate.sdstate.edu/pictures/BKMS2/mostrecent1.jpg",
 		"https://climate.sdstate.edu/pictures/BKMS2/mostrecent2.jpg",
-		//"https://sd.cdn.iteris-atis.com/camera_images/CSDBKX/1/latest.jpg",
-		//"https://sd.cdn.iteris-atis.com/camera_images/CSDBKX/2/latest.jpg",
+		"https://sd.cdn.iteris-atis.com/camera_images/CSDBKX/1/latest.jpg", //136
+		"https://sd.cdn.iteris-atis.com/camera_images/CSDBKX/4/latest.jpg", //136
+    "https://sd.cdn.iteris-atis.com/camera_images/CSDBK3/0/latest.jpg", // 133
+    "https://sd.cdn.iteris-atis.com/camera_images/CSDBK3/1/latest.jpg",// 133
+    "https://sd.cdn.iteris-atis.com/camera_images/CSDBK3/4/latest.jpg",// 133
+    "https://sd.cdn.iteris-atis.com/camera_images/CSDBK3/5/latest.jpg",// 133
+    "https://sd.cdn.iteris-atis.com/camera_images/CSDBK2/0/latest.jpg", // 132
+    "https://sd.cdn.iteris-atis.com/camera_images/CSDBK2/1/latest.jpg", //132
+    "https://sd.cdn.iteris-atis.com/camera_images/CSDBK2/2/latest.jpg", // 132
+    "https://sd.cdn.iteris-atis.com/camera_images/CSDBK2/4/latest.jpg", //132
+    "https://sd.cdn.iteris-atis.com/camera_images/CSDBK2/5/latest.jpg", //132
+    "https://sd.cdn.iteris-atis.com/camera_images/CSDBK1/0/latest.jpg", // 130
+    "https://sd.cdn.iteris-atis.com/camera_images/CSDBK1/1/latest.jpg", //130
+    "https://sd.cdn.iteris-atis.com/camera_images/CSDBK1/4/latest.jpg", //130
+    "https://sd.cdn.iteris-atis.com/camera_images/CSDBK1/5/latest.jpg",  // 130
 		//"https://campanilecam.sdstate.edu/jpg/1/image.jpg",
       ],
       [
