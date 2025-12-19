@@ -244,8 +244,7 @@ const aURL = [
         "CAM LOCAL",
         "https://climate.sdstate.edu/pictures/BKMS2/mostrecent1.jpg",
 		"https://climate.sdstate.edu/pictures/BKMS2/mostrecent2.jpg",
-		"https://sd.cdn.iteris-atis.com/camera_images/CSDBKX/1/latest.jpg", //136
-		"https://sd.cdn.iteris-atis.com/camera_images/CSDBKX/4/latest.jpg", //136
+
     "https://sd.cdn.iteris-atis.com/camera_images/CSDBK3/0/latest.jpg", // 133
     "https://sd.cdn.iteris-atis.com/camera_images/CSDBK3/1/latest.jpg",// 133
     "https://sd.cdn.iteris-atis.com/camera_images/CSDBK3/4/latest.jpg",// 133
@@ -275,13 +274,19 @@ const aURL = [
       [
         "CAM AREA",
 		
-		"https://sd.cdn.iteris-atis.com/camera_images/CSDWRD/0/latest.jpg",
-		"https://sd.cdn.iteris-atis.com/camera_images/CSDWRD/1/latest.jpg",
-		"https://sd.cdn.iteris-atis.com/camera_images/SDBNT/0/latest.jpg",
-		"https://sd.cdn.iteris-atis.com/camera_images/SDBNT/1/latest.jpg",
-		"https://sd.cdn.iteris-atis.com/camera_images/SDARL/0/latest.jpg",
-		"https://sd.cdn.iteris-atis.com/camera_images/SDARL/1/latest.jpg",
-		//"https://ipcamlive.com/player/snapshot.php?alias=5582e965970a8",
+		"https://sd.cdn.iteris-atis.com/camera_images/CSDWRD/0/latest.jpg", // 121 ward
+		//"https://sd.cdn.iteris-atis.com/camera_images/CSDWRD/1/latest.jpg", // 121 ward
+		//"https://sd.cdn.iteris-atis.com/camera_images/SDBNT/0/latest.jpg",  // 157 brandt
+		//"https://sd.cdn.iteris-atis.com/camera_images/SDBNT/1/latest.jpg", // 157 brandt
+		"https://sd.cdn.iteris-atis.com/camera_images/SDARL/0/latest.jpg", // arlington
+		//"https://sd.cdn.iteris-atis.com/camera_images/SDARL/1/latest.jpg", // arlington
+    "https://sd.cdn.iteris-atis.com/camera_images/CSDBKX/1/latest.jpg", //136
+		//"https://sd.cdn.iteris-atis.com/camera_images/CSDBKX/4/latest.jpg", //136
+		"https://ipcamlive.com/player/snapshot.php?alias=5582e965970a8",  // falls park
+    "https://s37.ipcamlive.com/streams/25te5hpu7xtun4vzw/snapshot.jpg", // rapid city
+    "https://s52.ipcamlive.com/streams/34rhz0prcpu34ixqy/snapshot.jpg", // watertown
+    "https://iowadotsnapshot.us-east-1.skyvdn.com/wwdtv063lb.jpg", // exira
+    "https://public.carsprogram.org/cameras/MN/C30343-v2", //springfield
 
 		
 		
