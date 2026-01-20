@@ -20,13 +20,13 @@ const aURL = [
 //"2196F3", "Meshcom Map", "https://26269.de/meshcom-map/", "1"
    ["f3de21ff", "satellite.js"],
 
-  [
-    "FF000F",
-    "LCL Alerts",
-    "https://alerts.weather.gov/search?zone=SDC011", 
-    "1"
+//[
+//  "FF000F",
+//  "LCL Alerts",
+//  "https://alerts.weather.gov/search?zone=SDC011", 
+//  "1"
 
-    ],
+//  ],
   
 ["FF000F", "NAT Alerts", "https://warn.pbs.org/", "1"],
 
@@ -87,7 +87,9 @@ const aURL = [
   [
     "2196F3",
     "APRS",
-    "https://aprs.to/",
+   // "https://aprs.to/",
+  "https://aprs-map.info/?center=44.30001,-96.772&zoom=7",
+ // "https://aprs.fi/#!z=11&lat=44.3000&lng=-96.772&timerange=3600&tail=3600",
     "1",
     "R",
   ],
@@ -109,18 +111,19 @@ const aURL = [
   [
     "2196F3",
     "CONTEST",
-    "https://www.contestcalendar.com/fivewkcal.html",
+    //"https://www.contestcalendar.com/fivewkcal.html",
+    "https://www.contestcalendar.com/weeklycont.php",
     "1",
     "R"
   ],
   ["2196F3", "DX CLUSTER", "https://dxcluster.ha8tks.hu/map/", "1","R"],
-  [
-    "2196F3",
-    "DXSUMMIT",
-    "http://dxsummit.fi/#/",
-    "1",
-    "R",
-  ],
+ //[]
+ // "2196F3",
+ // "DXSUMMIT",
+ // "http://dxsummit.fi/#/",
+ // "1",
+ // "R",
+//],
   ["2196F3", "DX Heat", "https://dxheat.com/dxc/", "1","R"],
   [
     "2196F3",
@@ -129,13 +132,13 @@ const aURL = [
     "1",
     "R",
   ],
-  [
-    "2196F3",
-    "POTA",
-    "https://pota.app",
-    "1",
-    "R",
-  ],
+//[
+//  "2196F3",
+//  "POTA",
+//  "https://pota.app",
+//  "1",
+//  "R",
+//],
   [
     "2196F3",
     "RADIO REF",
@@ -158,8 +161,8 @@ const aURL = [
   
   [
     "2196F3",
-    "HH",
-    "https://apps.hamshackhotline.com/services.php",
+    "SondeHub",
+    "https://www.sondehub.org/index.html?embed=1&hidelist=1&hidegraph=1&expandgraph=0#!mt=Mapnik&mz=5&qm=3d&mc=44.30001,-96.772",
     "1",
     "R",
   ],
