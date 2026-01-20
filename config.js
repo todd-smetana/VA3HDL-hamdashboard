@@ -54,7 +54,7 @@ const aURL = [
   
   ["2196F3", "SD511", "https://www.sd511.org/#&zoom=6.643670548755828&lon=-99.55851272999115&lat=44.234424028697276&threat-forecast&cams&rwis&radar", "1"],
   ["2196F3", "MESONET", "https://climate.sdstate.edu/", "1.0"],
-  ["2196F3", "SF CAMS", "https://www.arcgis.com/apps/dashboards/fbaac9e7423f41c7a5ebcdbace527e8c", "1.0"],
+  ["2196F3", "SF CAMS", "https://experience.arcgis.com/experience/43e97c2a89d6450bb50bf6b3789b7f34", "1.0"],
   [
     "2196F3",
     "POWER",
