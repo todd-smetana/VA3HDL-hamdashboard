@@ -286,9 +286,9 @@ const aURL = [
     "https://sd.cdn.iteris-atis.com/camera_images/CSDBKX/1/latest.jpg", //136
 		//"https://sd.cdn.iteris-atis.com/camera_images/CSDBKX/4/latest.jpg", //136
 		"https://ipcamlive.com/player/snapshot.php?alias=5582e965970a8",  // falls park
-    "https://s37.ipcamlive.com/streams/25te5hpu7xtun4vzw/snapshot.jpg", // rapid city
+    "https://s32.ipcamlive.com/streams/20wstu8ngyk0eqron/snapshot.jpg", // rapid city
    // "https://s52.ipcamlive.com/streams/34rhz0prcpu34ixqy/snapshot.jpg", // watertown old
-    "https://s52.ipcamlive.com/streams/34hbsuypx5luan6kv/snapshot.jpg", // watertown new
+    "https://s52.ipcamlive.com/streams/341i52yd0olrvx6mb/snapshot.jpg", // watertown new
 
     
     "https://iowadotsnapshot.us-east-1.skyvdn.com/wwdtv063lb.jpg", // exira
