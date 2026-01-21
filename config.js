@@ -238,7 +238,7 @@ const aURL = [
       ],
       [
         "APRS",
-        "iframe|https://aprs-map.info/?center=44.2933,-96.7885&zoom=13"
+        "iframe|https://aprs-map.info/?center=44.2933,-96.7885&zoom=8"
         //"iframe|https://meshmap.net/"
        
 
