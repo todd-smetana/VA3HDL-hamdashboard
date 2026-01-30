@@ -1,10 +1,10 @@
 // CUT START
 // const disableSetup = true;
-var topBarCenterText = "Satellite Dashboard";
+var topBarCenterText = "BROOKINGS AREA CAMS";
 
 // Grid layout desired
-var layout_cols = 2;
-var layout_rows = 2;
+var layout_cols = 4;
+var layout_rows = 3;
 
 // Menu items
 // Structure is as follows HTML Color code, Option, target URL, scaling 1=Original Size, side (optional, nothing is Left, "R" is Right)
@@ -58,26 +58,47 @@ var aURL = [
 var currentDate = new Date();
 var aIMG = [
   // 1
-  ["Radar NA", "https://radar.weather.gov/ridge/standard/CONUS-LARGE_loop.gif", "https://radar.weather.gov/ridge/standard/CONUS_loop.gif"],
+ // ["MM133N", "https://sd.cdn.iteris-atis.com/camera_images/CSDBK3/0/latest.jpg"],
+  ["MM136N", "https://sd.cdn.iteris-atis.com/camera_images/CSDBKX/4/latest.jpg"],
+  
   // 2
-  [
-    "Radar Local",
-    "https://s.w-x.co/staticmaps/wu/wxtype/county_loc/bgm/animate.png",
-  ],
+ // ["MM133S","https://sd.cdn.iteris-atis.com/camera_images/CSDBK3/1/latest.jpg"],
+  ["MM136S","https://sd.cdn.iteris-atis.com/camera_images/CSDBKX/5/latest.jpg"],
   // 3
-  [
-    "Satellite NA",
-    "https://cdn.star.nesdis.noaa.gov/GOES16/ABI/SECTOR/can/GEOCOLOR/GOES16-CAN-GEOCOLOR-1125x560.gif",
-  ],
+  ["MM133N","https://sd.cdn.iteris-atis.com/camera_images/CSDBK3/4/latest.jpg"],
   // 4
-  [
-    "Satellite Local",
-    "https://cdn.star.nesdis.noaa.gov/GOES16/GLM/SECTOR/cgl/EXTENT3/GOES16-CGL-EXTENT3-600x600.gif",
-  ],
+  ["MM133S","https://sd.cdn.iteris-atis.com/camera_images/CSDBK3/5/latest.jpg"],
+   // 5
+ // ["MM132N", "https://sd.cdn.iteris-atis.com/camera_images/CSDBK2/0/latest.jpg"], // nix me
+  // 8
+  ["MM132N","https://sd.cdn.iteris-atis.com/camera_images/CSDBK2/4/latest.jpg"],
+  // 6
+  ["MM132S","https://sd.cdn.iteris-atis.com/camera_images/CSDBK2/1/latest.jpg"], 
+  // 7
+//  ["MM132W","https://sd.cdn.iteris-atis.com/camera_images/CSDBK2/2/latest.jpg"],  // brookings
+  
+   // 9
+  //["MM130", "https://sd.cdn.iteris-atis.com/camera_images/CSDBK1/0/latest.jpg"],
+  // 10
+ // ["MM130","https://sd.cdn.iteris-atis.com/camera_images/CSDBK1/1/latest.jpg"],
+  // 11
+  ["MM130N","https://sd.cdn.iteris-atis.com/camera_images/CSDBK1/4/latest.jpg"],
+  // 12
+  ["MM130S","https://sd.cdn.iteris-atis.com/camera_images/CSDBK1/5/latest.jpg"],
+  // 11
+  ["MM129N","https://sd.cdn.iteris-atis.com/camera_images/CSDBK0/3/latest.jpg"],
+  // 12
+  ["MM129S","https://sd.cdn.iteris-atis.com/camera_images/CSDBK0/4/latest.jpg"],
+    // 11
+  ["MM127N","https://sd.cdn.iteris-atis.com/camera_images/CSDEKT/4/latest.jpg"],
+  // 12
+  ["MM127S","https://sd.cdn.iteris-atis.com/camera_images/CSDEKT/5/latest.jpg"],
 ];
 
 // Image rotation intervals in milliseconds per tile - If the line below is commented, tiles will be rotated every 5000 milliseconds (5s)
 var tileDelay = [
+  60100, 60200, 300300, 60400,
+  60100, 60200, 300300, 60400,
   60100, 60200, 300300, 60400,
 ];
 

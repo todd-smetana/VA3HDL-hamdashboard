@@ -244,23 +244,23 @@ const aURL = [
 
       ],
       [
-        "CAM LOCAL",
-        "https://climate.sdstate.edu/pictures/BKMS2/mostrecent1.jpg",
-		"https://climate.sdstate.edu/pictures/BKMS2/mostrecent2.jpg",
+["BROOKINGS WEST","BROOKINGS EAST","MM132W","MM136N","MM136S","MM133N","MM133S","MM132N","MM132S","MM130N","MM130S","MM129N","MM129S","MM127N","MM127S"],
 
-    "https://sd.cdn.iteris-atis.com/camera_images/CSDBK3/0/latest.jpg", // 133
-    "https://sd.cdn.iteris-atis.com/camera_images/CSDBK3/1/latest.jpg",// 133
-    "https://sd.cdn.iteris-atis.com/camera_images/CSDBK3/4/latest.jpg",// 133
-    "https://sd.cdn.iteris-atis.com/camera_images/CSDBK3/5/latest.jpg",// 133
-    "https://sd.cdn.iteris-atis.com/camera_images/CSDBK2/0/latest.jpg", // 132
-    "https://sd.cdn.iteris-atis.com/camera_images/CSDBK2/1/latest.jpg", //132
-    "https://sd.cdn.iteris-atis.com/camera_images/CSDBK2/2/latest.jpg", // 132
-    "https://sd.cdn.iteris-atis.com/camera_images/CSDBK2/4/latest.jpg", //132
-    "https://sd.cdn.iteris-atis.com/camera_images/CSDBK2/5/latest.jpg", //132
-    "https://sd.cdn.iteris-atis.com/camera_images/CSDBK1/0/latest.jpg", // 130
-    "https://sd.cdn.iteris-atis.com/camera_images/CSDBK1/1/latest.jpg", //130
-    "https://sd.cdn.iteris-atis.com/camera_images/CSDBK1/4/latest.jpg", //130
-    "https://sd.cdn.iteris-atis.com/camera_images/CSDBK1/5/latest.jpg",  // 130
+	"https://climate.sdstate.edu/pictures/BKMS2/mostrecent1.jpg", // west
+	"https://climate.sdstate.edu/pictures/BKMS2/mostrecent2.jpg", // east
+	"https://sd.cdn.iteris-atis.com/camera_images/CSDBK2/2/latest.jpg",  // brookings
+	"https://sd.cdn.iteris-atis.com/camera_images/CSDBKX/4/latest.jpg",
+  "https://sd.cdn.iteris-atis.com/camera_images/CSDBKX/5/latest.jpg",
+  "https://sd.cdn.iteris-atis.com/camera_images/CSDBK3/4/latest.jpg",
+  "https://sd.cdn.iteris-atis.com/camera_images/CSDBK3/5/latest.jpg",
+  "https://sd.cdn.iteris-atis.com/camera_images/CSDBK2/4/latest.jpg",
+  "https://sd.cdn.iteris-atis.com/camera_images/CSDBK2/1/latest.jpg", 
+  "https://sd.cdn.iteris-atis.com/camera_images/CSDBK1/4/latest.jpg",
+  "https://sd.cdn.iteris-atis.com/camera_images/CSDBK1/5/latest.jpg",
+  "https://sd.cdn.iteris-atis.com/camera_images/CSDBK0/3/latest.jpg",
+  "https://sd.cdn.iteris-atis.com/camera_images/CSDBK0/4/latest.jpg",
+  "https://sd.cdn.iteris-atis.com/camera_images/CSDEKT/4/latest.jpg",
+  "https://sd.cdn.iteris-atis.com/camera_images/CSDEKT/5/latest.jpg",
 		//"https://campanilecam.sdstate.edu/jpg/1/image.jpg",
       ],
       [
@@ -275,7 +275,7 @@ const aURL = [
       ["ADSB", "iframe|https://globe.adsbexchange.com/?airport=BKX"
       ],
       [
-        "CAM AREA",
+        ["MM121N","ARLINGTON","MM136","FALLS PARK","RAPID", "WATERTOWN","EXIRA I80/HW71","SPRINGFIELD HW14"],
 		
 		"https://sd.cdn.iteris-atis.com/camera_images/CSDWRD/0/latest.jpg", // 121 ward
 		//"https://sd.cdn.iteris-atis.com/camera_images/CSDWRD/1/latest.jpg", // 121 ward
