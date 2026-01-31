@@ -12,7 +12,7 @@ var layout_rows = 3;
 // add new lines following the structure for extra menu options. The comma at the end is important!
 var aURL = [
   ["f3de21ff", "config.js"],
-  [
+  /*[
     "2196F3",
     "LIGHTNING",
     "https://map.blitzortung.org/#3.87/36.5/-89.41",
@@ -46,7 +46,7 @@ var aURL = [
     "https://embed.windy.com/embed2.html?lat=44.01&lon=-79.45&width=900&detailLat=44.01&detailLon=-79.45&height=600&zoom=8&level=surface&overlay=clouds&product=ecmwf&menu=&message=&marker=&calendar=now&pressure=&type=map&location=coordinates&detail=true&metricWind=km%2Fh&metricTemp=%C2%B0C&radarRange=-1",
     "1",
     "R"
-  ]
+  ]*/
 ];
 
 // Dashboard items
