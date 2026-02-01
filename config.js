@@ -275,7 +275,7 @@ const aURL = [
       ["ADSB", "iframe|https://globe.adsbexchange.com/?airport=BKX"
       ],
       [
-        ["MM121N","ARLINGTON","MM136","FALLS PARK","RAPID", "WATERTOWN","EXIRA I80/HW71","SPRINGFIELD HW14"],
+        ["MM121N","ARLINGTON","MM136","FALLS PARK","RAPID", "WATERTOWN","EXIRA I80/HW71","ELK HORN","SPRINGFIELD HW14"],
 		
 		"https://sd.cdn.iteris-atis.com/camera_images/CSDWRD/0/latest.jpg", // 121 ward
 		//"https://sd.cdn.iteris-atis.com/camera_images/CSDWRD/1/latest.jpg", // 121 ward
@@ -295,6 +295,7 @@ const aURL = [
 
     
     "https://iowadotsnapshot.us-east-1.skyvdn.com/wwdtv063lb.jpg", // exira
+    "https://imgproxy.windy.com/_/full/plain/current/1565124671/original.jpg", // elk horn
     "https://public.carsprogram.org/cameras/MN/C30343-v2", //springfield
 
 		
