@@ -132,13 +132,13 @@ const aURL = [
     "1",
     "R",
   ],
-//[
-//  "2196F3",
-//  "POTA",
-//  "https://pota.app",
-//  "1",
-//  "R",
-//],
+  [
+    "2196F3",
+    "HAMCLOCK",
+    "https://openhamclock.com/",
+    "1",
+    "R",
+  ],
   [
     "2196F3",
     "RADIO REF",
