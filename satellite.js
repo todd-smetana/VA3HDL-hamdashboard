@@ -103,7 +103,15 @@ var tileDelay = [
 ];
 
 var aRSS = [
-  ["https://weather.gc.ca/rss/battleboard/onrm28_e.xml", 60],
-];
+
+
+
+  ["http://www.spc.noaa.gov/products/spcwwrss.xml",15],
+  ["https://www.keloland.com/weather/forecast/feed",60],
+  ["https://moxie.foxweather.com/google-publisher/weather-news.xml",60],
+  
+//  ["https://www.amsat.org/feed/"],          // Example RSS feed
+//  ["https://daily.hamweekly.com/atom.xml"], // Example Atom feed
+  ];
 
 // CUT END
