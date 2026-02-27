@@ -31,7 +31,7 @@ const aURL = [
 ["FF000F", "NAT Alerts", "https://warn.pbs.org/", "1"],
 
 
-["FF000F", "NWS DSHBRD", "https://www.arcgis.com/apps/MapSeries/index.html?appid=ea8b0eeb2e9c45b790329c0ed2fdc225", "1"],
+["FF000F", "NWS DSHBRD", "https://www.arcgis.com/apps/dashboards/f9025bf433354bc5b79d73207bfdf249", "1"],
 
   [
     "2196F3",
