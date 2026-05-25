@@ -294,7 +294,9 @@ const aURL = [
     "https://imgproxy.windy.com/_/full/plain/current/1676469552/original.jpg", // watertown new new
 
     
-    "https://iowadotsnapshot.us-east-1.skyvdn.com/wwdtv063lb.jpg", // exira
+   // "https://iowadotsnapshot.us-east-1.skyvdn.com/wwdtv063lb.jpg", // exira
+    "https://atmsqf.iowadot.gov/SNAPSHOTS/PUBLIC/Metro/wwdtv063hd.jpeg", // exira2
+
     "https://imgproxy.windy.com/_/full/plain/current/1565124671/original.jpg", // elk horn
     "https://public.carsprogram.org/cameras/MN/C30343-v2", //springfield
 
