@@ -288,7 +288,8 @@ const aURL = [
 		"https://ipcamlive.com/player/snapshot.php?alias=5582e965970a8",  // falls park
     // "https://imgproxy.windy.com/_/full/plain/current/1627589235/original.jpg"  // falls bakup from meteoblue.com
     //"https://s32.ipcamlive.com/streams/20wstu8ngyk0eqron/snapshot.jpg", // rapid city
-    "https://imgproxy.windy.com/_/normal/plain/current/1689344301/original.jpg",  // rapid city new
+   // "https://imgproxy.windy.com/_/normal/plain/current/1689344301/original.jpg",  // rapid city new
+    "https://imgproxy.windy.com/_/full/plain/current/1626651169/original.jpg", // rapid city new new
    // "https://s52.ipcamlive.com/streams/34rhz0prcpu34ixqy/snapshot.jpg", // watertown old
     //"https://s52.ipcamlive.com/streams/341i52yd0olrvx6mb/snapshot.jpg", // watertown new
     "https://imgproxy.windy.com/_/full/plain/current/1676469552/original.jpg", // watertown new new
