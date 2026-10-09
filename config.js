@@ -364,12 +364,12 @@ var aRSS = [
 
 
 
-  ["http://www.spc.noaa.gov/products/spcwwrss.xml",15],
+  ["https://www.spc.noaa.gov/products/spcwwrss.xml",15],
   ["https://www.keloland.com/weather/forecast/feed",60],
   ["https://moxie.foxweather.com/google-publisher/weather-news.xml",60],
   
-//  ["https://www.amsat.org/feed/"],          // Example RSS feed
-//  ["https://daily.hamweekly.com/atom.xml"], // Example Atom feed
+  //["https://www.amsat.org/feed/"],          // Example RSS feed
+  //["https://daily.hamweekly.com/atom.xml"], // Example Atom feed
   ];
 
 
