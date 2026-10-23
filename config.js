@@ -312,7 +312,8 @@ const aURL = [
 	 ],
       [
         "LIGHTNING",
-        "https://images.lightningmaps.org/blitzortung/america/index.php?animation=usa",
+        //"https://images.lightningmaps.org/blitzortung/america/index.php?animation=usa",
+        "https://saratoga-weather.org/BO-new/BO/BONorthAmerica-ani.gif",
         
       ],
       ["LOCAL LIGHTNING", "https://www.blitzortung.org/en/Images/image_b_mn.png"],
